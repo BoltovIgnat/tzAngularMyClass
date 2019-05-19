@@ -1,0 +1,17 @@
+<mat-calendar class="display" [selected]="selectedDate" (selectedChange)="onSelect($event)" [minDate]="$ctrl.date1" [maxDate]="$ctrl.date2"></mat-calendar>
+<div class="panel">
+  <div class="mc-dates__item">
+    <mat-form-field class="mc-dates__field">
+      <input matInput [matDatepicker]="picker1" placeholder="Начальная дата:" [(ngModel)]="$ctrl.date1" [max]="$ctrl.date2" (ngModelChange)="$ctrl.mcChange($event)">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="mc-dates__item">
+    <mat-form-field class="mc-dates__field">
+      <input matInput [matDatepicker]="picker2" placeholder="Конечная дата:" [(ngModel)]="$ctrl.date2" [min]="$ctrl.date1" (ngModelChange)="$ctrl.mcChange($event)">
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
