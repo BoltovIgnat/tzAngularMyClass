@@ -1,0 +1,9 @@
+<md-calendar class="display" ng-model="ctrl.date" md-min-date="ctrl.date1" md-max-date="ctrl.date2"></md-calendar>
+<div class="panel">
+    <div class="panel__item">
+        <md-datepicker ng-model="ctrl.date1" md-placeholder="Start date" md-open-on-focus md-max-date="ctrl.date2"></md-datepicker>
+    </div>
+    <div class="panel__item">
+        <md-datepicker ng-model="ctrl.date2" md-placeholder="End date" md-open-on-focus md-min-date="ctrl.date1"></md-datepicker>
+    </div>
+</div>
